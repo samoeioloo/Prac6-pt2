@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samoei - Pi2 WebInterface</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <form method="post" action="/">
+
+        <input type="submit" value="SensorON" name="SensorON"/>
+        <input type="submit" value="SensorOFF" name="SensorOFF"/>
+        <input type="submit" value="Status" name="Status"/>
+        <input type="submit" value="Check Log" name="Check Log"/>
+        <input type="submit" value="Refresh Log" name="Refresh Log"/>
+        <input type="submit" value="Exit()" name="Exit()"/>
+
+    </form>
+    <table class="table">
+        <tr class="table__header">
+            {% for header in headings %}
+            <th class="table__cell">{{ header }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+        <tr class="table__row">
+            {% for cell in row %}
+            <td class="table__cell">{{ cell }}</td>
+            {% endfor %}  
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+
+<!--<html>
+    <body>
+
+        <form method="post" action="/">
+
+            <input type="submit" value="SensorOn" name="SensorOn"/>
+            <input type="submit" value="SensorOff" name="SensorOff"/>
+            <input type="submit" value="Status" name="Status"/>
+            <input type="submit" value="LogCheck" name="LogCheck"/>
+            <input type="submit" value="LogDownload" name="LogDownload"/>
+            <input type="submit" value="Exit()" name="Exit()"/>
+
+        </form>
+    </body>
+</html>-->
