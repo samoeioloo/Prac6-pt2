@@ -1,5 +1,5 @@
 OLXSAM001
 
 ### Submission files:
-TCP server source code files have are uploaded under the directory as well as short demo videos
+TCP server source code have are uploaded under the server directory as well as short demo videos
 
